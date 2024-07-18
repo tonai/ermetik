@@ -1,0 +1,266 @@
+*
+{
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+a
+{
+	color: white;
+}
+
+a:hover
+{
+	color: #ff17c2;
+}
+
+a:active, a:focus
+{
+	outline: none;
+}
+
+p
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+h1
+{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+input, textarea
+{
+	background-color: white;
+}
+
+textarea
+{
+	overflow: auto;
+}
+
+.titre
+{
+	background-color: white;
+	font-size: 120%;
+	color: red;
+}
+
+.erreur
+{
+	color: red;
+}
+
+.center
+{
+	text-align: center;
+}
+
+body
+{
+	width: 1000px;
+	text-align: center;
+	margin: auto;
+	background-color: black;
+	color: white;
+}
+
+	#page
+	{
+		width: 1000px;
+		text-align: justify;
+	}
+	
+		#page #contenu
+		{
+			margin-top: 20px;
+			width: 1000px;
+			height: 750px;
+			background-image: url('fond.jpg');
+			background-repeat: no-repeat;
+			background-position: -1000px 0px;
+			border: 1px black solid;
+		}
+		
+			#page #contenu #bouton
+			{
+				height: 53px;
+				width: 31px;
+				margin-left: 494px;
+				margin-top: 38px;
+			}
+			
+				#page #contenu #bouton a
+				{
+					display: block;
+					height: 53px;
+					width: 31px;
+				}
+			
+			#page #contenu #menu
+			{
+				width: 169px;
+				height: 261px;
+				margin-top: 171px;
+				margin-left: 57px;
+				float: left;
+			}
+			
+				#page #contenu #menu a
+				{
+					display: block;
+					width: 114px;
+					height: 51px;
+				}
+				
+				#page #contenu #menu #menu1
+				{
+					margin-left: 56px;
+					background-image: url('menu/menu1.jpg');
+					background-position: 0px -51px;
+				}
+				
+				#page #contenu #menu #menu2
+				{
+					background-image: url('menu/menu2.jpg');
+					background-position: 0px -51px;
+					margin-top: 2px;
+				}
+				
+				#page #contenu #menu #menu3
+				{
+					margin-left: 56px;
+					background-image: url('menu/menu3.jpg');
+					background-position: 0px -51px;
+					margin-top: 1px;
+				}
+				
+				#page #contenu #menu #menu4
+				{
+					background-image: url('menu/menu4.jpg');
+					background-position: 0px -51px;
+					margin-top: 2px;
+				}
+				
+				#page #contenu #menu #menu5
+				{
+					margin-left: 56px;
+					background-image: url('menu/menu5.jpg');
+					background-position: 0px -51px;
+					margin-top: 1px;
+				}
+				
+				#page #contenu #menu #menu1:hover, #page #contenu #menu #menu2:hover, #page #contenu #menu #menu3:hover, #page #contenu #menu #menu4:hover, #page #contenu #menu #menu5:hover
+				{
+					background-position: -114px -51px;
+				}
+				
+			#page #contenu #corps
+			{
+				width: 740px;
+				height: 480px;
+				margin-top: 171px;
+				margin-left: 240px;
+			}
+			
+				#page #contenu #corps #overflow
+				{
+					overflow: auto;
+					height: 470px;
+				}
+					
+				#page #contenu #corps #messages
+				{
+					text-align: center;
+				}
+				
+				#page #contenu #corps #accueil
+				{
+					float: left;
+					width: 500px;
+				}
+				
+				#page #contenu #corps #commentaires
+				{
+					float: right;
+					width: 220px;
+					text-align: center;
+					background-color: black;
+					-moz-opacity: 0.7;
+					opacity: 0.7;
+					filter: alpha(opacity=70);
+					overflow: auto;
+				}
+				
+		#page #contenu #programme
+		{
+			width: 114px;
+			text-align: center;
+			position: relative;
+			top: -377px;
+			left: 57px;
+			float: left;
+			background-color: black;
+			-moz-opacity: 0.7;
+			opacity: 0.7;
+			filter: alpha(opacity=70);
+		}
+		
+		#page #contenu #trombi
+		{
+			width: 114px;
+			text-align: center;
+			position: relative;
+			top: -324px;
+			left: 113px;
+			float: left;
+			background-color: black;
+			-moz-opacity: 0.7;
+			opacity: 0.7;
+			filter: alpha(opacity=70);
+		}
+		
+		#page #contenu #evenement
+		{
+			width: 114px;
+			text-align: center;
+			position: relative;
+			top: -272px;
+			left: 57px;
+			background-color: black;
+			-moz-opacity: 0.7;
+			opacity: 0.7;
+			filter: alpha(opacity=70);
+		}
+		
+		#page #contenu #bonus
+		{
+			width: 114px;
+			text-align: center;
+			position: relative;
+			top: -219px;
+			left: 113px;
+			background-color: black;
+			-moz-opacity: 0.7;
+			opacity: 0.7;
+			filter: alpha(opacity=70);
+		}
+			
+			#page #contenu #programme ul li a, #page #contenu #trombi ul li a, #page #contenu #evenement ul li a, #page #contenu #bonus ul li a
+			{
+				display: block;
+				width: 114px;
+			}
+			
+			#page #contenu #programme ul li a:hover, #page #contenu #trombi ul li a:hover, #page #contenu #evenement ul li a:hover, #page #contenu #bonus ul li a:hover
+			{
+				background-color: #fffffe;
+			}
