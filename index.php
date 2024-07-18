@@ -5,7 +5,7 @@ if (!isset($on))
 }
 if (isset($_GET['bouton']))
 {
-	$on=1-$_GET['bouton'];
+	$on=1-intval($_GET['bouton']);
 }
 if (isset($_GET['module']))
 	$module=$_GET['module'];
@@ -118,14 +118,14 @@ else
 					<ul>
 						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=programme">ZE programme</a></li>
 						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=critiques">Les critiques</a></li>
-						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=television">Télévision</a></li>
+						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=television">Tï¿½lï¿½vision</a></li>
 						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=clap">CLAP</a></li>
 						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=c">En C</a></li>
 						</ul>
 				</div>
 				<div id="trombi" style="display: none;" onMouseOver="document.getElementById('trombi').style.display='block';" onMouseOut="javascript:off()">
 					<ul>
-						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=equipe">L'équipe</a></li>
+						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=equipe">L'ï¿½quipe</a></li>
 						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=film">Le film</a></li>
 					</ul>
 				</div>
@@ -133,7 +133,7 @@ else
 					<ul>
 						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=vaisselle">Open vaisselle</a></li>
 						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=bouffe">Open bouffe</a></li>
-						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=vip">Soirée VIP</a></li>
+						<li><a href="index.php?bouton=<?php echo !$on; ?>&module=vip">Soirï¿½e VIP</a></li>
 					</ul>
 				</div>
 				<div id="bonus" style="display: none;" onMouseOver="document.getElementById('bonus').style.display='block';" onMouseOut="javascript:off()">

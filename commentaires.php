@@ -8,11 +8,11 @@ if (isset($_POST['pseudo']))
 	{
 		$pseudo=htmlentities($_POST['pseudo'], ENT_QUOTES);
 		$comm=htmlentities($_POST['comm'], ENT_QUOTES);
-		mysql_connect($db['hostName'], $db['userName'], $db['password']);
-		mysql_select_db($db['dataBase']);
-		mysql_query("INSERT INTO commentaires(pseudo, comm) VALUES('$pseudo','$comm')") or die(mysql_error());
-		mysql_close();
-		echo "<p>Votre message a bien été enregistré</p>\n";
+		$mysqli = mysqli_connect($db['hostName'], $db['userName'], $db['password']);
+		mysqli_select_db($mysqli, $db['dataBase']);
+		mysqli_query($mysqli, "INSERT INTO commentaires(pseudo, comm) VALUES('$pseudo','$comm')") or die(mysqli_error());
+		mysqli_close($mysqli);
+		echo "<p>Votre message a bien ï¿½tï¿½ enregistrï¿½</p>\n";
 	}
 }
 ?>
@@ -34,7 +34,7 @@ if (isset($_POST['pseudo']))
 if (isset($_POST['comm']))
 {
 	if ($_POST['comm']==null)
-		echo 'Il faut écrire un message...';
+		echo 'Il faut ï¿½crire un message...';
 }
 ?></textarea>
 		</p>
@@ -65,9 +65,9 @@ if (isset($_POST['comm']))
 	if ($pageActuelle!=1)
 	{
 		$pagePrec=$pageActuelle-1;
-		echo "\n\t<a href=\"index.php?bouton=".!$on."&module=commentaires&page=".$pagePrec."\" title=\"page précédante\"><</a>&nbsp&nbsp;";
+		echo "\n\t<a href=\"index.php?bouton=".!$on."&module=commentaires&page=".$pagePrec."\" title=\"page prï¿½cï¿½dante\"><</a>&nbsp&nbsp;";
 	}
-	echo "\n\t<a href=\"index.php?bouton=".!$on."&module=commentaires&page=1\" title=\"première page\">1..</a>&nbsp&nbsp;";
+	echo "\n\t<a href=\"index.php?bouton=".!$on."&module=commentaires&page=1\" title=\"premiï¿½re page\">1..</a>&nbsp&nbsp;";
 	$i=2;
 	if ($pageActuelle<=5)
 	{
@@ -90,7 +90,7 @@ if (isset($_POST['comm']))
 		echo "\n\t<a href=\"index.php?bouton=".!$on."&module=commentaires&page=".$i."\">".$i."</a>&nbsp&nbsp;";
 	}
 	if ($pagesTotales!=1)
-		echo "\n\t<a href=\"index.php?bouton=".!$on."&module=commentaires&page=".$pagesTotales."\" title=\"dernière page\">..".$pagesTotales."</a>&nbsp&nbsp;";
+		echo "\n\t<a href=\"index.php?bouton=".!$on."&module=commentaires&page=".$pagesTotales."\" title=\"derniï¿½re page\">..".$pagesTotales."</a>&nbsp&nbsp;";
 	if ($pageActuelle!=$pagesTotales)
 	{
 		$pageSuiv=$pageActuelle+1;

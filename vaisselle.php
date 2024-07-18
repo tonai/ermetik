@@ -15,11 +15,11 @@ if (isset($_POST['nom']))
 		{
 			if ($accept=='on')
 			{
-				mysql_connect($db['hostName'], $db['userName'], $db['password']);
-				mysql_select_db($db['dataBase']);
-				$reponse=mysql_query("SELECT chambre FROM vaisselle");
+				$mysqli = mysqli_connect($db['hostName'], $db['userName'], $db['password']);
+				mysqli_select_db($mysqli, $db['dataBase']);
+				$reponse=mysqli_query($mysqli, "SELECT chambre FROM vaisselle");
 				$inscrit=0;
-				while($donnees=mysql_fetch_row($reponse))
+				while($donnees=mysqli_fetch_row($reponse))
 				{
 					if ($chambre==$donnees[0])
 					{
@@ -27,12 +27,12 @@ if (isset($_POST['nom']))
 					}
 				}
 				if ($inscrit==1)
-					echo "<p class=\"erreur\">Vous vous ètes déja inscrit</p>\n";
+					echo "<p class=\"erreur\">Vous vous ï¿½tes dï¿½ja inscrit</p>\n";
 				else
 				{
-					mysql_query("INSERT INTO vaisselle(nom, chambre) VALUES('$nom','$chambre')") or die(mysql_error());
-					mysql_close();
-					echo "<p>Votre inscription a bien été enregistrée</p>\n";
+					mysqli_query($mysqli, "INSERT INTO vaisselle(nom, chambre) VALUES('$nom','$chambre')") or die(mysqli_error());
+					mysqli_close($mysqli);
+					echo "<p>Votre inscription a bien ï¿½tï¿½ enregistrï¿½e</p>\n";
 				}
 			}
 			else
